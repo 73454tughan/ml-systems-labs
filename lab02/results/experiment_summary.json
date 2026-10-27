@@ -1,0 +1,147 @@
+{
+    "gradient_check": {
+        "passing_count": 10,
+        "total_checks": 10,
+        "details": [
+            {
+                "check": 1,
+                "layer": "Layer 1 (W1)",
+                "index": "[37, 11]",
+                "analytic": 2.3956844962451372e-05,
+                "numeric": 2.3956858719031967e-05,
+                "rel_error": 5.742230547078492e-07,
+                "passed": true
+            },
+            {
+                "check": 2,
+                "layer": "Layer 2 (W2)",
+                "index": "[12, 8]",
+                "analytic": 2.2813250948304915e-05,
+                "numeric": 2.2813240185826086e-05,
+                "rel_error": 4.7176436421406406e-07,
+                "passed": true
+            },
+            {
+                "check": 3,
+                "layer": "Layer 3 (W3)",
+                "index": "[15, 9]",
+                "analytic": 7.013194054830302e-06,
+                "numeric": 7.013190028715143e-06,
+                "rel_error": 5.740772503551904e-07,
+                "passed": true
+            },
+            {
+                "check": 4,
+                "layer": "Layer 1 (W1)",
+                "index": "[11, 5]",
+                "analytic": -8.725454908625784e-05,
+                "numeric": -8.725455913349832e-05,
+                "rel_error": 1.151486017242513e-07,
+                "passed": true
+            },
+            {
+                "check": 5,
+                "layer": "Layer 2 (W2)",
+                "index": "[15, 0]",
+                "analytic": -3.05108401364229e-05,
+                "numeric": -3.0510838300301654e-05,
+                "rel_error": 6.017930806827008e-08,
+                "passed": true
+            },
+            {
+                "check": 6,
+                "layer": "Layer 3 (W3)",
+                "index": "[0, 1]",
+                "analytic": -7.880786521832779e-05,
+                "numeric": -7.880787133984768e-05,
+                "rel_error": 7.767650344775533e-08,
+                "passed": true
+            },
+            {
+                "check": 7,
+                "layer": "Layer 1 (W1)",
+                "index": "[12, 7]",
+                "analytic": -9.072517293674593e-05,
+                "numeric": -9.072518292185804e-05,
+                "rel_error": 1.1005888090614745e-07,
+                "passed": true
+            },
+            {
+                "check": 8,
+                "layer": "Layer 2 (W2)",
+                "index": "[13, 12]",
+                "analytic": 0.0,
+                "numeric": 0.0,
+                "rel_error": 0.0,
+                "passed": true
+            },
+            {
+                "check": 9,
+                "layer": "Layer 3 (W3)",
+                "index": "[6, 9]",
+                "analytic": 8.220583157133558e-05,
+                "numeric": 8.220581992901543e-05,
+                "rel_error": 1.416240177670857e-07,
+                "passed": true
+            },
+            {
+                "check": 10,
+                "layer": "Layer 1 (W1)",
+                "index": "[50, 4]",
+                "analytic": -4.5311572900900684e-05,
+                "numeric": -4.5311554508487e-05,
+                "rel_error": 4.0590984833260643e-07,
+                "passed": true
+            }
+        ]
+    },
+    "timing_benchmark": {
+        "median_forward_ms": 0.3586000530049205,
+        "median_backward_ms": 0.22659997921437025,
+        "ratio": 0.6319016891256873
+    },
+    "experiments": {
+        "W16_lr0.001": {
+            "width": 16,
+            "learning_rate": 0.001,
+            "final_train_loss": 2.302562024448346,
+            "final_test_loss": 2.30254850619666,
+            "final_test_accuracy": 0.10185185185185185
+        },
+        "W16_lr0.01": {
+            "width": 16,
+            "learning_rate": 0.01,
+            "final_train_loss": 2.30260235805393,
+            "final_test_loss": 2.302473402578941,
+            "final_test_accuracy": 0.10185185185185185
+        },
+        "W16_lr0.1": {
+            "width": 16,
+            "learning_rate": 0.1,
+            "final_train_loss": 0.8443638817077022,
+            "final_test_loss": 0.9537948407186735,
+            "final_test_accuracy": 0.6722222222222223
+        },
+        "W64_lr0.001": {
+            "width": 64,
+            "learning_rate": 0.001,
+            "final_train_loss": 2.3025316152943156,
+            "final_test_loss": 2.302514624569954,
+            "final_test_accuracy": 0.10185185185185185
+        },
+        "W64_lr0.01": {
+            "width": 64,
+            "learning_rate": 0.01,
+            "final_train_loss": 2.302412063152686,
+            "final_test_loss": 2.3022645636466046,
+            "final_test_accuracy": 0.10185185185185185
+        },
+        "W64_lr0.1": {
+            "width": 64,
+            "learning_rate": 0.1,
+            "final_train_loss": 0.13711611088544728,
+            "final_test_loss": 0.20672398667427574,
+            "final_test_accuracy": 0.9444444444444444
+        }
+    }
+}
