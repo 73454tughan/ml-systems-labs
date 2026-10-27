@@ -1,0 +1,12 @@
+Python version: 3.11.9
+numpy: 2.4.6
+pandas: 3.0.5
+scipy: 1.17.1
+sklearn: 1.9.1
+matplotlib: 3.11.1
+torch: 2.14.1+cpu
+torchvision: 0.29.1+cpu
+torchinfo: 1.8.0
+thop: 0.1.1
+psutil: 7.2.2
+joblib: 1.6.0
