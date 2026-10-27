@@ -43,6 +43,45 @@ The objective of this laboratory is to implement three comparable deep learning 
 ### Pareto Trade-off Curves
 ![Tradeoff Plots](results/tradeoff_plots.png)
 
+### Primary Handwritten Mathematical Derivations & Diagrams
+Below are the primary handwritten derivations for parameter totals and FLOPs across all three model architectures:
+
+![Handwritten FLOPs and Parameter Derivations](results/handwritten_flops_derivation.jpg)
+
+#### Transcribed Mathematical Step-by-Step Breakdown
+
+1. **Multi-Layer Perceptron (Input $28^2 = 784$):**
+   - **Layer 1 (Linear: $784 \rightarrow 128$):**
+     - Weights: $784 \times 128 = 100,352$, Biases: $128$. (Subtotal: $100,480$)
+     - FLOPs: $2 \times 784 \times 128 = 200,704 \text{ FLOPs}$
+   - **Layer 2 (Linear: $128 \rightarrow 64$):**
+     - Weights: $128 \times 64 = 8,192$, Biases: $64$. (Subtotal: $8,256$)
+     - FLOPs: $2 \times 128 \times 64 = 16,384 \text{ FLOPs}$
+   - **Layer 3 (Output: $64 \rightarrow 10$):**
+     - Weights: $64 \times 10 = 640$, Biases: $10$. (Subtotal: $650$)
+     - FLOPs: $2 \times 64 \times 10 = 1,280 \text{ FLOPs}$
+   - **Total Parameters:** $100,480 + 8,256 + 650 = 109,386 \text{ parameters}$
+
+2. **Convolutional Neural Network (Formula: $2 \times H_{out} \times W_{out} \times C_{in} \times C_{out} \times K_h \times K_w$):**
+   - **Conv Layer 1 ($1 \rightarrow 32$ channels, $3 \times 3$ kernel, padding = 1):**
+     - Output Dimensions: $28 \times 28$
+     - Parameters: $(1 \times 3 \times 3 \times 32) + 32 = 320 \text{ parameters}$
+     - FLOPs: $2 \times 28 \times 28 \times 1 \times 32 \times 3 \times 3 = 451,584 \text{ FLOPs}$
+   - **Max Pool Layer ($2 \times 2$ downsampling):**
+     - Output Dimensions: $28 \times 28 \rightarrow 14 \times 14$
+   - **Conv Layer 2 ($32 \rightarrow 64$ channels, $3 \times 3$ kernel, padding = 1):**
+     - Output Dimensions: $14 \times 14$
+     - Parameters: $(32 \times 3 \times 3 \times 64) + 64 = 18,496 \text{ parameters}$
+     - FLOPs: $2 \times 14 \times 14 \times 32 \times 64 \times 3 \times 3 = 722,534 \text{ FLOPs}$
+
+3. **Vision Transformer / Self-Attention:**
+   - **Projection & Q, K, V Matrices ($N=49, D=64$):**
+     - $Q, K, V \text{ Projections}: 3 \times (2 \times N \times D \times D) = 3 \times (2 \times 49 \times 64 \times 64) = 307,328 \text{ FLOPs}$
+   - **Self-Attention Score Calculation ($Q \cdot K^T, N=784$):**
+     - Attention Matrix ($N \times N$): $2 \times 784 \times 784 = 1,229,312 \text{ FLOPs}$
+     - Softmax Normalization: $2 \times 784 \times 784 = 1,229,312 \text{ FLOPs}$
+     - Attention $\times V$: $2 \times 784 \times 784 \times 64 = 100,135,424 \text{ FLOPs}$
+
 ### FLOP Discrepancy & Profiler Gap Analysis
 The disparity between hand-calculated FLOPs and `thop.profile` arises from two systematic factors:
 1. **MACs vs FLOPs Unit Convention:** Profilers like `thop` report Multiply-Accumulate operations (MACs). Because one multiply-add contains two floating-point operations (1 MAC = 2 FLOPs), raw profiler output must be doubled to compare directly with theoretical FLOP formulas.
