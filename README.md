@@ -1,69 +1,40 @@
-# Machine Learning Systems Engineering Portfolio
+# Machine Learning Systems Architecture & Hardware-Aware Optimization
 
-**Student:** Tughan Bulut Kurtulus  
+**Author:** Tughan Bulut Kurtulus  
 **Student ID:** 73454  
-**Textbook:** *Vijay Janapa Reddi, Introduction to Machine Learning Systems: Principles and Practices of Engineering Artificially Intelligent Systems.*  
-**Environment:** Python 3.11.8 (Pinned Stack)  
+**Track:** Systems & Software Engineering, Vistula University  
+**Academic Year:** 2025/2026  
+**Curriculum Reference:** *Machine Learning Systems* (Vijay Janapa Reddi, Harvard University)  
 
 ---
 
-## Repository Structure
+## 1. Executive Overview
 
-This repository contains the complete laboratory coursework for the Machine Learning Systems curriculum, structured strictly according to the course specifications:
+This portfolio documents four hands-on systems investigations addressing the computational boundaries of deep learning and data engineering:
 
 ```
-ml-systems-labs/
-├── README.md                 # Portfolio overview and navigation
-├── requirements.txt          # Strictly pinned dependency versions
-├── .gitignore                # Environment and dataset ignore rules
-├── lab01/                    # Environment and First System Measurements (Ch. 1, 2, 12)
-│   ├── report.md
-│   ├── src/
-│   └── results/
-├── lab02/                    # A Neural Network from Scratch (Ch. 3)
-│   ├── report.md
-│   ├── src/
-│   └── results/
-├── lab03/                    # Architectures and Their Costs (Ch. 4)
-│   ├── report.md
-│   ├── src/
-│   └── results/
-└── lab04/                    # Data Pipeline and Quality Engineering (Ch. 5-6)
-    ├── report.md
-    ├── src/
-    └── results/
+├── lab01/  # Microsecond latency benchmarking & TinyML deployment tier classification
+├── lab02/  # First-principles tensor backpropagation with numerical finite-difference verification
+├── lab03/  # FLOPs derivation, profiler analysis (thop), and Pareto efficiency frontiers
+└── lab04/  # Production-grade tabular pipeline with strict zero-leakage enforcement
 ```
 
----
+## 2. Laboratory Modules & Key Systems Telemetry
 
-## Laboratory Index
+| Module | Core Investigation | Systems Method | Key Findings |
+| :--- | :--- | :--- | :--- |
+| **Lab 01** | Baseline Profiling | High-resolution wall-clock timer & memory profiler | Logistic Regression fits in 1.05 KB Flash; 0.027 ms latency enables sub-milliwatt TinyML. |
+| **Lab 02** | NumPy Neural Engine | Analytical calculus vs two-sided finite difference | Relative error < 1e-7; 2.1x backward/forward workload ratio confirms GEMM doubling. |
+| **Lab 03** | Architectural Cost | Theoretical FLOP derivations + `thop` MAC profiling | CNN delivers supreme parameter efficiency (89.88% acc, 20.4k weights vs MLP 235k). |
+| **Lab 04** | Data Quality Pipeline | Zero-silent-drop schema validation + training-isolated scalers | Feature synthesis (`capital_net`, `hours_per_age`) expands linear decision surface. |
 
-| Lab | Title | Textbook Reference | Graded Evidence & Artifacts | Status |
-| :---: | :--- | :--- | :--- | :---: |
-| **Lab 01** | **Environment and First System Measurements** | Ch. 1, 2, 12 | Pinned versions, training time, single-sample latency, memory, deployment fit table | ✅ Complete |
-| **Lab 02** | **A Neural Network from Scratch** | Ch. 3 | Matrix calculus chain rule, 10/10 numerical grad check, 6-config grid loss curves | ✅ Complete |
-| **Lab 03** | **Architectures and Their Costs** | Ch. 4 | PyTorch MLP, CNN, Attention; hand vs thop FLOPs, latency profiling, Pareto trade-off plots | ✅ Complete |
-| **Lab 04** | **Data Pipeline and Quality Engineering** | Ch. 5, 6 | OpenML Adult pipeline, zero-leakage transforms, feature synthesis, duplicate audit, SHA-256 hash | ✅ Complete |
-
----
-
-## Reproduction Instructions
+## 3. Environment Replication
 
 ```bash
-# Clone the repository
-git clone https://github.com/73454tughan/ml-systems-labs.git
-cd ml-systems-labs
-
-# Create and activate isolated environment
+# Set up isolated virtual environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-# Install dependencies
+# Install strictly pinned dependencies
 pip install -r requirements.txt
-
-# Run individual lab pipelines
-python lab01/src/run_benchmarks.py
-python lab02/src/train_eval.py
-python lab03/src/train_profile.py
-python lab04/src/data_pipeline.py
 ```
