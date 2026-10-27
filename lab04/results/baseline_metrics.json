@@ -1,0 +1,18 @@
+{
+    "without_derived_features": {
+        "accuracy": 0.854,
+        "f1": 0.6601,
+        "precision": 0.7448,
+        "recall": 0.5927
+    },
+    "with_derived_features": {
+        "accuracy": 0.8578,
+        "f1": 0.6696,
+        "precision": 0.7537,
+        "recall": 0.6024
+    },
+    "delta": {
+        "accuracy_change": 0.0038,
+        "f1_change": 0.0095
+    }
+}
