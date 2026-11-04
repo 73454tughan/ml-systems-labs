@@ -1,0 +1,42 @@
+{
+  "student": "Tughan Bulut Kurtulus (73454)",
+  "execution_modes": {
+    "eager_us": 43.158800108358264,
+    "traced_us": 32.42100006900728,
+    "compiled_us": null,
+    "compile_status": "Failed (InductorError: InvalidCxxCompiler: Compiler: cl is not found.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n)",
+    "speedup_traced_vs_eager": 1.3311989147927532,
+    "speedup_compiled_vs_eager": null
+  },
+  "tensor_layout_analysis": {
+    "contiguous_tensor": {
+      "shape": [
+        2048,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "stride": [
+        2048,
+        1
+      ],
+      "is_contiguous": true
+    },
+    "non_contiguous_tensor": {
+      "shape": [
+        2048,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "stride": [
+        1,
+        2048
+      ],
+      "is_contiguous": false
+    },
+    "contig_row_sum_ms": 0.21794350002892315,
+    "non_contig_row_sum_ms": 0.46699950005859137,
+    "non_contig_slowdown_ratio": 2.142754888292682,
+    "contiguous_reallocation_cost_ms": 8.862581999856047
+  },
+  "traced_ir_graph": "graph(%self.1 : __torch__.SystemsSmallNet,\n      %x : Float(64, 2, strides=[2, 1], requires_grad=0, device=cpu)):\n  %sigmoid : __torch__.torch.nn.modules.activation.Sigmoid = prim::GetAttr[name=\"sigmoid\"](%self.1)\n  %fc2 : __torch__.torch.nn.modules.linear.___torch_mangle_0.Linear = prim::GetAttr[name=\"fc2\"](%self.1)\n  %relu : __torch__.torch.nn.modules.activation.ReLU = prim::GetAttr[name=\"relu\"](%self.1)\n  %fc1 : __torch__.torch.nn.modules.linear.Linear = prim::GetAttr[name=\"fc1\"](%self.1)\n  %bias.1 : Tensor = prim::GetAttr[name=\"bias\"](%fc1)\n  %weight.1 : Tensor = prim::GetAttr[name=\"weight\"](%fc1)\n  %input.1 : Float(64, 8, strides=[8, 1], requires_grad=1, device=cpu) = aten::linear(%x, %weight.1, %bias.1), scope: __module.fc1 # C:\\Users\\Tuan\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\torch\\nn\\modules\\linear.py:134:0\n  %input.3 : Float(64, 8, strides=[8, 1], requires_grad=1, device=cpu) = aten::relu(%input.1), scope: __module.relu # C:\\Users\\Tuan\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\torch\\nn\\functional.py:1777:0\n  %bias : Tensor = prim::GetAttr[name=\"bias\"](%fc2)\n  %weight : Tensor = prim::GetAttr[name=\"weight\"](%fc2)\n  %input : Float(64, 1, s"
+}

@@ -1,0 +1,109 @@
+{
+  "student": "Tughan Bulut Kurtulus (73454)",
+  "target_expression": "((a * b + c) ** 2).relu().sum()",
+  "forward_loss_custom": 56.16890625,
+  "forward_loss_torch": 56.16890625,
+  "forward_abs_diff": 0.0,
+  "max_abs_torch_diff": 0.0,
+  "max_abs_numerical_diff": 4.5337856136029586e-08,
+  "tolerance_threshold": 1e-06,
+  "verification_passed": true,
+  "comparison_table": [
+    {
+      "param": "a[0]",
+      "custom_grad": 15.0,
+      "torch_grad": 15.0,
+      "numerical_grad": 14.999999997655777,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 2.3442225938197225e-09
+    },
+    {
+      "param": "a[1]",
+      "custom_grad": -52.0,
+      "torch_grad": -52.0,
+      "numerical_grad": -51.999999968188604,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 3.181139618391171e-08
+    },
+    {
+      "param": "a[2]",
+      "custom_grad": -6.40625,
+      "torch_grad": -6.40625,
+      "numerical_grad": -6.406250001589342,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 1.589341991348192e-09
+    },
+    {
+      "param": "a[3]",
+      "custom_grad": -5.25,
+      "torch_grad": -5.25,
+      "numerical_grad": -5.2499999725341695,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 2.746583049884066e-08
+    },
+    {
+      "param": "b[0]",
+      "custom_grad": -7.5,
+      "torch_grad": -7.5,
+      "numerical_grad": -7.49999998106432,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 1.8935679690912366e-08
+    },
+    {
+      "param": "b[1]",
+      "custom_grad": 26.0,
+      "torch_grad": 26.0,
+      "numerical_grad": 25.999999984094302,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 1.5905698091955855e-08
+    },
+    {
+      "param": "b[2]",
+      "custom_grad": -3.84375,
+      "torch_grad": -3.84375,
+      "numerical_grad": -3.843749993848178,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 6.151822162792087e-09
+    },
+    {
+      "param": "b[3]",
+      "custom_grad": 1.05,
+      "torch_grad": 1.05,
+      "numerical_grad": 1.050000015823116,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 1.5823115928625953e-08
+    },
+    {
+      "param": "c[0]",
+      "custom_grad": -5.0,
+      "torch_grad": -5.0,
+      "numerical_grad": -5.00000002290335,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 2.2903350327396765e-08
+    },
+    {
+      "param": "c[1]",
+      "custom_grad": -13.0,
+      "torch_grad": -13.0,
+      "numerical_grad": -13.000000045337856,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 4.5337856136029586e-08
+    },
+    {
+      "param": "c[2]",
+      "custom_grad": -5.125,
+      "torch_grad": -5.125,
+      "numerical_grad": -5.1249999799551915,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 2.0044808479724452e-08
+    },
+    {
+      "param": "c[3]",
+      "custom_grad": -2.1,
+      "torch_grad": -2.1,
+      "numerical_grad": -2.099999996119095,
+      "torch_abs_diff": 0.0,
+      "num_abs_diff": 3.880904930753104e-09
+    }
+  ]
+}

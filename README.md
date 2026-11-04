@@ -16,7 +16,8 @@ This portfolio documents four hands-on systems investigations addressing the com
 ├── lab01/  # Microsecond latency benchmarking & TinyML deployment tier classification
 ├── lab02/  # First-principles tensor backpropagation with numerical finite-difference verification
 ├── lab03/  # FLOPs derivation, profiler analysis (thop), and Pareto efficiency frontiers
-└── lab04/  # Production-grade tabular pipeline with strict zero-leakage enforcement
+├── lab04/  # Production-grade tabular pipeline with strict zero-leakage enforcement
+└── lab05/  # Dynamic scalar autograd DAG, PyTorch verification, graph compilation & memory contiguity
 ```
 
 ## 2. Laboratory Modules & Key Systems Telemetry

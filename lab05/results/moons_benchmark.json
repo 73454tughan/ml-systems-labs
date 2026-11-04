@@ -1,0 +1,35 @@
+{
+  "student": "Tughan Bulut Kurtulus (73454)",
+  "dataset": "make_moons (n=100, noise=0.1)",
+  "architecture": "2 -> 8 -> 1 (ReLU, Sigmoid)",
+  "loss_function": "Binary Cross-Entropy (BCE)",
+  "epochs": 40,
+  "trials": 5,
+  "custom_engine": {
+    "times_ms": [
+      2797.4803999532014,
+      3016.59200002905,
+      3053.461299976334,
+      3137.8059999551624,
+      3627.726300037466
+    ],
+    "median_time_ms": 3053.461299976334,
+    "mean_time_ms": 3126.6131999902427,
+    "final_loss_median": 0.3288413559411983,
+    "final_accuracy_median": 0.88
+  },
+  "pytorch_engine": {
+    "times_ms": [
+      44.18299999088049,
+      16.923299990594387,
+      13.750899932347238,
+      14.215299976058304,
+      14.57320002373308
+    ],
+    "median_time_ms": 14.57320002373308,
+    "mean_time_ms": 20.7291399827227,
+    "final_loss_median": 0.3517993688583374,
+    "final_accuracy_median": 0.8399999737739563
+  },
+  "slowdown_custom_vs_pytorch": 209.52579358024605
+}
