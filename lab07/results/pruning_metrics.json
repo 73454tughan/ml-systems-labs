@@ -1,0 +1,116 @@
+{
+  "global_unstructured": [
+    {
+      "target_sparsity": 0.0,
+      "accuracy_pre_ft": 0.892,
+      "accuracy_post_ft": 0.892,
+      "latency_ms": 29.42,
+      "storage_kb": 3690.6,
+      "dense_kb": 3985.0,
+      "compression_factor": 1.08
+    },
+    {
+      "target_sparsity": 0.25,
+      "accuracy_pre_ft": 0.8923,
+      "accuracy_post_ft": 0.9073,
+      "latency_ms": 28.04,
+      "storage_kb": 3028.7,
+      "dense_kb": 3985.0,
+      "compression_factor": 1.32
+    },
+    {
+      "target_sparsity": 0.5,
+      "accuracy_pre_ft": 0.8898,
+      "accuracy_post_ft": 0.9058,
+      "latency_ms": 27.71,
+      "storage_kb": 2203.2,
+      "dense_kb": 3985.0,
+      "compression_factor": 1.81
+    },
+    {
+      "target_sparsity": 0.75,
+      "accuracy_pre_ft": 0.8887,
+      "accuracy_post_ft": 0.9066,
+      "latency_ms": 26.68,
+      "storage_kb": 1291.1,
+      "dense_kb": 3985.0,
+      "compression_factor": 3.09
+    },
+    {
+      "target_sparsity": 0.9,
+      "accuracy_pre_ft": 0.837,
+      "accuracy_post_ft": 0.9027,
+      "latency_ms": 27.67,
+      "storage_kb": 683.3,
+      "dense_kb": 3985.0,
+      "compression_factor": 5.83
+    },
+    {
+      "target_sparsity": 0.95,
+      "accuracy_pre_ft": 0.6066,
+      "accuracy_post_ft": 0.8969,
+      "latency_ms": 27.84,
+      "storage_kb": 463.5,
+      "dense_kb": 3985.0,
+      "compression_factor": 8.6
+    }
+  ],
+  "layerwise_unstructured": [
+    {
+      "target_sparsity": 0.0,
+      "accuracy_pre_ft": 0.892,
+      "accuracy_post_ft": 0.892,
+      "latency_ms": 27.28
+    },
+    {
+      "target_sparsity": 0.25,
+      "accuracy_pre_ft": 0.8635,
+      "accuracy_post_ft": 0.9056,
+      "latency_ms": 33.64
+    },
+    {
+      "target_sparsity": 0.5,
+      "accuracy_pre_ft": 0.7926,
+      "accuracy_post_ft": 0.9032,
+      "latency_ms": 29.67
+    },
+    {
+      "target_sparsity": 0.75,
+      "accuracy_pre_ft": 0.3428,
+      "accuracy_post_ft": 0.8912,
+      "latency_ms": 36.89
+    },
+    {
+      "target_sparsity": 0.9,
+      "accuracy_pre_ft": 0.0718,
+      "accuracy_post_ft": 0.8298,
+      "latency_ms": 14.22
+    },
+    {
+      "target_sparsity": 0.95,
+      "accuracy_pre_ft": 0.1,
+      "accuracy_post_ft": 0.7842,
+      "latency_ms": 19.8
+    }
+  ],
+  "structured_filter": [
+    {
+      "filter_sparsity": 0.1,
+      "accuracy_pre_ft": 0.8404,
+      "accuracy_post_ft": 0.9034,
+      "latency_ms": 77.22
+    },
+    {
+      "filter_sparsity": 0.25,
+      "accuracy_pre_ft": 0.5014,
+      "accuracy_post_ft": 0.9003,
+      "latency_ms": 50.89
+    },
+    {
+      "filter_sparsity": 0.5,
+      "accuracy_pre_ft": 0.2664,
+      "accuracy_post_ft": 0.8913,
+      "latency_ms": 74.09
+    }
+  ]
+}

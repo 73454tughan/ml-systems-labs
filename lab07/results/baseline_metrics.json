@@ -1,0 +1,23 @@
+{
+  "student": "Tughan Bulut Kurtulus (73454)",
+  "model_name": "OversizedBaselineCNN",
+  "parameters": 1017602,
+  "train_time_sec": 190.37460850004572,
+  "test_accuracy": 0.892,
+  "latency": {
+    "batch_latency_mean_ms": 9.21648199961055,
+    "batch_latency_median_ms": 8.570949983550236,
+    "batch_latency_std_ms": 2.0328090640788035,
+    "sample_latency_mean_ms": 0.14400753124391485,
+    "throughput_samples_per_sec": 6944.08126687649
+  },
+  "storage": {
+    "dense_size_bytes": 4080937,
+    "dense_size_kb": 3985.2900390625,
+    "dense_size_mb": 3.8918848037719727,
+    "compressed_size_bytes": 3779200,
+    "compressed_size_kb": 3690.625,
+    "compression_factor": 1.0798415008467401,
+    "actual_sparsity_ratio": 0.0
+  }
+}

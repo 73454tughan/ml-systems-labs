@@ -1,0 +1,25 @@
+{
+  "teacher_baseline": {
+    "parameters": 1017602,
+    "accuracy": 0.892,
+    "latency_median_ms": 63.2603500271216,
+    "size_kb": 3985.2900390625
+  },
+  "student_distilled": {
+    "parameters": 108958,
+    "accuracy": 0.8841,
+    "latency_median_ms": 39.76394998608157,
+    "size_kb": 435.0703125,
+    "train_time_sec": 218.16738679999253
+  },
+  "student_plain": {
+    "parameters": 108958,
+    "accuracy": 0.8956,
+    "latency_median_ms": 23.592800018377602,
+    "size_kb": 434.82421875,
+    "train_time_sec": 167.49248129996704
+  },
+  "kd_accuracy_delta": -0.011499999999999955,
+  "compression_vs_teacher": 9.33939683180675,
+  "speedup_vs_teacher": 1.5908970323437281
+}
